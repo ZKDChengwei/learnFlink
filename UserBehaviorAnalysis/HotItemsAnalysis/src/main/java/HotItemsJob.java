@@ -11,7 +11,7 @@ public class HotItemsJob {
 -统计近1h内的热门商品，每5分钟更新一次
 -热门度用浏览次数（pv）来衡量
  */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // 创建执行环境
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
@@ -45,6 +45,7 @@ public class HotItemsJob {
                 });
 
 
+        env.execute();
 
     }
 }
