@@ -44,6 +44,6 @@ public class HotItemsJob {
                 });
 
         env.execute();
-
+        //cs
     }
 }
