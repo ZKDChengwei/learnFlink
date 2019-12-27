@@ -1,7 +1,6 @@
 import com.cw.entity.UserBehaviorJava;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
-import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.TimestampExtractor;
 
@@ -43,7 +42,6 @@ public class HotItemsJob {
                         return 0;
                     }
                 });
-
 
         env.execute();
 
